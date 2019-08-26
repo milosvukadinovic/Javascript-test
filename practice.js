@@ -58,6 +58,6 @@ function arrayAnalysis(array) {
     length: array.length,
   };
 }
-
-module.exports = arrayAnalysis, calculator, capitalize,
-reverseString, caesarCipher, caesarDeciper;
+//
+// module.exports = arrayAnalysis, calculator, capitalize,
+// reverseString, caesarCipher, caesarDeciper;
