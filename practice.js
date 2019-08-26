@@ -1,9 +1,9 @@
 
-function capitalize(string) {
+const capitalize = (string) => {
   return string[0].toUpperCase() + string.slice(1);
 }
 
-function reverseString(string) {
+const reverseString = (string) => {
   return string.split('').reverse().join('');
 }
 
@@ -29,27 +29,27 @@ const caesarCipher =(text, key) => {
     if (re.test(text.charAt(i))) {
       cipherText += String.fromCharCode((text.charCodeAt(i)-97+key)%26+97);
     } else {
-      chipherText += text.charAt(i);
+      cipherText += text.charAt(i);
     }
   }
   return cipherText;
 };
 
-const caesarDeciper = (chipher, key) => {
+const caesarDeciper = (cipher, key) => {
   let output = '';
   const re = /[a-z]/;
-  for (let i = 0; i < chipher.length; i++) {
-    if (re.test(chipher.charAt(i))) {
+  for (let i = 0; i < cipher.length; i++) {
+    if (re.test(cipher.charAt(i))) {
       output += String
-          .fromCharCode((chipher.charCodeAt(i)-97 + 26 - key)%26 + 97);
+          .fromCharCode((cipher.charCodeAt(i)-97 + 26 - key)%26 + 97);
     } else {
-      output += chipher.charAt(i);
+      output += cipher.charAt(i);
     }
   }
   return output;
 };
 
-function arrayAnalysis(array) {
+const arrayAnalysis = (array) => {
   return {
     average: Math.round(1000 * array.reduce((sum, a
     ) => sum + a, 0)/array.length)/1000,
@@ -58,6 +58,6 @@ function arrayAnalysis(array) {
     length: array.length,
   };
 }
-//
-// module.exports = arrayAnalysis, calculator, capitalize,
-// reverseString, caesarCipher, caesarDeciper;
+
+module.exports = { arrayAnalysis, calculator, capitalize,
+reverseString, caesarCipher, caesarDeciper };

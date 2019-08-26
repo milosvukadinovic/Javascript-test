@@ -3,8 +3,8 @@ const calculator = practice.calculator;
 const capitalize = practice.capitalize;
 const reverseString = practice.reverseString;
 const arrayAnalysis = practice.arrayAnalysis;
-const chiper = practice.caesarCipher;
-const decipher = practice.caesarDecipher;
+const cipher = practice.caesarCipher;
+const decipher = practice.caesarDeciper;
 
 test('Capitalize first letter of a word.', () => {
   expect(capitalize('string')).toBe('String');
@@ -39,10 +39,18 @@ test('Divide Fifteen with Five to equal Three', () => {
 });
 
 test('abc with key 2 equal to cde', () => {
-  expect(chiper('abc', 2)).toBe('cde');
+  expect(cipher('abc', 2)).toBe('cde');
 });
 test('cde with key 2 equal to abc', () => {
   expect(decipher('cde', 2)).toBe('abc');
+});
+
+test('\'hello world\' with key 10 equal to \'rovvy gybvn\'', () => {
+  expect(cipher('hello world', 10)).toBe('rovvy gybvn');
+});
+
+test('\'rovvy gybvn\' with key 10 equal to \'hello world\'', () => {
+  expect(decipher('rovvy gybvn',10)).toBe('hello world');
 });
 
 test('Given an array of numbers, should return 3,0,6,7', () => {
