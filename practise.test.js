@@ -50,7 +50,15 @@ test('\'hello world\' with key 10 equal to \'rovvy gybvn\'', () => {
 });
 
 test('\'rovvy gybvn\' with key 10 equal to \'hello world\'', () => {
-  expect(decipher('rovvy gybvn',10)).toBe('hello world');
+  expect(decipher('rovvy gybvn', 10)).toBe('hello world');
+});
+
+test('\'Hello, world\' with key 35 equal to \'Qnuux, fxaum\'', () => {
+  expect(cipher('Hello, world', 35)).toBe('Qnuux, fxaum');
+});
+
+test('\'Air is RiGid!\' with key 40 equal to \'Owf wg FwUwr!\'', () => {
+  expect(cipher('Air is RiGid!', 40)).toBe('Owf wg FwUwr!');
 });
 
 test('Given an array of numbers, should return 3,0,6,7', () => {
@@ -61,3 +69,4 @@ test('Given an array of numbers, should return 3,0,6,7', () => {
     length: 7,
   });
 });
+
