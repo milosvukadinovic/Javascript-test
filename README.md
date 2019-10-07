@@ -1,9 +1,13 @@
 # Javascript-test
 This is a very simple testing app.
 
-#### Libraries used
+## Scripts
+
+- npm run test
+
+### Libraries used
 * Jest
 
-#### Authors
-@azdrenymeri
-@milosvukadinovic
+### Authors
+* [@azdrenymeri](https://github.com/azdrenymeri) 
+* [@milosvukadinovic](https://github.com/milosvukadinovic)
